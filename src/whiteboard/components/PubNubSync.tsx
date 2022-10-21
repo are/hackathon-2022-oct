@@ -18,9 +18,11 @@ const Counter = styled('div')`
   height: 32px;
 
   margin-left: 10px;
-  font-size: 18px;
+  margin-right: 20px;
+  font-size: 25px;
   line-height: 38px;
   text-align: center;
+  padding-bottom: 6px;
 `
 
 export function PubNubSync() {
@@ -64,7 +66,8 @@ export function PubNubSync() {
 
   return (
     <Counter>
-      <MdPerson size={22} style={{ marginTop: 5 }} /> <span style={{ marginLeft: 5 }}> {count}</span>
+      <span style={{ marginRight: 5 }}> {count}</span>
+      <MdPerson size={24} style={{ marginTop: 7 }} />
     </Counter>
   )
 }

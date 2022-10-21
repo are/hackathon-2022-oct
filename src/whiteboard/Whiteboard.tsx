@@ -12,7 +12,7 @@ const ComponentsContainer = styled('div')`
   display: flex;
   z-index: 1;
 
-  padding: 10px 30px;
+  padding: 5px 30px 5px 10px;
   border-radius: 50px;
 
   background-color: #e9e9e9;

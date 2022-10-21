@@ -40,14 +40,14 @@ export function ColorPicker() {
   )
 
   return (
-    <div style={{ display: 'inline-block' }}>
+    <div style={{ display: 'inline-block', paddingTop: 3 }}>
       {colors.map((color) => (
         <Button
           key={color}
           onClick={() => setProperty('color', color)}
           active={properties.color === color ? 1 : 0}
           background={color}
-          size={34}
+          size={32}
         />
       ))}
     </div>
