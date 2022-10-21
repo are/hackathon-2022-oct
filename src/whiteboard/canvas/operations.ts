@@ -131,14 +131,17 @@ export function applyOperation(ctx: CanvasRenderingContext2D, operation: Operati
       break
     case 'FF': {
       const [, position, color] = operation
-
-      const data = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height)
-
-      const ff = new FloodFill(data)
       const origin = decodePoint(position)
-      ff.fill(decodeColor(color), origin.x, origin.y, 100)
 
-      ctx.putImageData(ff.imageData, 0, 0)
+      if (origin.x > 0 && origin.x < ctx.canvas.width && origin.y > 0 && origin.y < ctx.canvas.height) {
+        const data = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height)
+
+        const ff = new FloodFill(data)
+
+        ff.fill(decodeColor(color), origin.x, origin.y, 100)
+
+        ctx.putImageData(ff.imageData, 0, 0)
+      }
       break
     }
     case 'T': {
