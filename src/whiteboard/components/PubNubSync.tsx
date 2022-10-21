@@ -18,7 +18,7 @@ const Counter = styled('div')`
   height: 32px;
 
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 38px;
   text-align: center;
 `

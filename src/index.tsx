@@ -34,6 +34,7 @@ function App() {
 
   return (
     <Whiteboard width={width} height={height}>
+      <PubNubSync />
       <ColorPicker />
       <StrokeThickness />
       <FreeHandTool />
@@ -42,7 +43,6 @@ function App() {
       <EmojiStampTool />
       <FloodFillTool />
       <DownloadImage />
-      <PubNubSync />
     </Whiteboard>
   )
 }
